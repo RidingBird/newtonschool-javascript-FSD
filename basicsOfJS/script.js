@@ -166,6 +166,30 @@
 // console.log(arr1);
 
 
-// let lastElement = arr1.pop();
-// console.log(lastElement);
-// console.log(arr1);
+// // let lastElement = arr1.pop();
+// // console.log(lastElement);
+// // console.log(arr1);
+
+// var a=12;
+
+// if(true){
+//     console.log(a, "inside of the if block");
+// }
+
+// if (true){
+//     var a=120;
+//     console.log(a,"inside answer");
+// }
+// console.log(a,"outside answer");
+
+
+// function myName(name){
+//     return `hey !!! ${name}`;
+// }
+// console.log(myName("yogesh")); 
+
+// var a=590;
+// console.log(a);
+
+// var a=9;
+// console.log(a);
