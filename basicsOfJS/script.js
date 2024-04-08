@@ -190,6 +190,61 @@
 
 // var a=590;
 // console.log(a);
-
-// var a=9;
 // console.log(a);
+// let a=9;
+
+// sum();
+// function sum(){
+//     console.log(10);
+//     return 10;
+// }
+
+// console.log(10=="10");
+
+let arr=[1,2,3,4,5];
+for (let i = 0; i< arr.length; i++) {
+      const element = arr[i];
+      console.log(arr[i]);
+}
+
+for (const iteam of arr) {
+    console.log(iteam);
+}
+let obj ={
+    name: "yogesh",
+    age: 50,
+    canDraive:false,
+}
+for (const key in obj) {
+    const value = obj[key];
+    console.log(key)
+    console.log(value);
+}
+
+let k=0;
+while(k<arr.length){
+    console.log(arr[k]);
+    k++;
+}
+
+switch (10=9) {
+    case 1:
+        console.log(true);
+        break;
+
+    default:
+        console.log(false);
+        break;
+} 
+
+console.log(callBackFunction);
+
+const greeting(fn){
+    fn();
+}
+
+const yogeshHelloFunction = function(){
+   console.log("hello in hindi");
+}
+const yogesh = greeting(yogeshHelloFunction);
+
