@@ -150,18 +150,32 @@
 // const multAnswer = loggingFunction(mult,3,4);
 // console.log(multAnswer);
 
-function greeting(fn){
-    fn();
-}
+// function greeting(fn){
+//     fn();
+// }
 
-const ridingHelloCallBackFunction = function(){
-    console.log("Hello from RidingBird");
-}
+// const ridingHelloCallBackFunction = function(){
+//     console.log("Hello from RidingBird");
+// }
 
-const RidingBird = (() =>{
-    console.log("Hello from RidingBird");
-})
-console.log();
+// const RidingBird = (() =>{
+//     console.log("Hello from RidingBird");
+// })
+// console.log();
+
+//---------DEFALT PARAMETER------------------
+
+//if in argument we do not provide the value as parameter 
+//so we can have a defalt value
+
+function sum(a=0,b=1){
+    return a+b;
+}
+const result = sum(10);
+
+//if i give some parameter to element then it will take our value
+//or this way we can have a defalt value
+
 
 
 
