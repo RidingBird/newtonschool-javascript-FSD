@@ -1,4 +1,4 @@
-// //HTML -->> Document 
+// //HTML -->> Document
 //  const elementHeading = document.getElementById("heading");
 // console.log(elementHeading); //english readable Element
 // console.dir(elementHeading); //"Real Object"
@@ -14,7 +14,6 @@
 
 //  const headingElement = document.getElementById("heading");
 // headingElement.style.backgroundColor = "green";
-
 
 // const paraElement = document.getElementById("para");
 // console.dir(paraElement);
@@ -65,5 +64,22 @@
 
 // namesListElement.before(headingElementForList);
 // namesListElement.after(footerElementForList);
+
+const containerElement = document.getElementById("container");
+console.log("contsinerElement");
+
+containerElement.textContent = `something 
+gfvbuiegfoinv hbvodbrgvo
+ginroingpergnf'e;kmperpgmerpgm
+diffrent`;
+
+containerElement.innerHTML = `hey you are boring`;
+
+const namesListElement = document.getElementById("names");
+const newListItem = document.getElementById("li");
+
+
+
+namesListElement.innerHTML += `<li>yohesh</li>n`;
 
 

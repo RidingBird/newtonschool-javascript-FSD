@@ -7,3 +7,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     console.log(containerElement, "containerElement -2")
 });
 
+document.addEventListener("load",()=>{
+//play with image........
+});
+
+window.addEventListener("beforeunload",() =>{
+    
+})
