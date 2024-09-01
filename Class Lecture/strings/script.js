@@ -25,4 +25,3 @@ country.localeCompare(str);
 console.log("apple".localeCompare("abc"));
 console.log("zebra".localeCompare("zzz"));
 console.log("abc".localeCompare("abc"));    
-
