@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New News</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>New News</h1>
+        <select id="category-select">
+            <option value="all">All</option>
+            <option value="business">Business</option>
+            <option value="sports">Sports</option>
+            <option value="science">Science</option>
+            <option value="hatke">Hatke</option>
+            <option value="world">World</option>
+            <option value="politics">Politics</option>
+        </select>
+        <button onclick="fetchNews()">Fetch News</button>
+        <div id="news-container"></div>
+        <button onclick="window.location.href='index.html'">Back to Dashboard</button>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        async function fetchNews() {
+            try {
+                const response = await fetch('https://content.newtonschool.co/v1/pr/64e3d1b73321338e9f18e1a1/inshortsnews');
+                const data = await response.json();
+                const category = document.getElementById('category-select').value;
+                const filteredNews = category === 'all' ? data : data.filter(news => news.category.toLowerCase() === category.toLowerCase());
+                displayNews(filteredNews);
+            } catch (error) {
+                console.error('Error fetching news:', error);
+            }
+        }
+
+        function displayNews(newsArray) {
+            const newsContainer = document.getElementById('news-container');
+            newsContainer.innerHTML = ''; // Clear existing content
+
+            newsArray.forEach(news => {
+                const newsCard = document.createElement('div');
+                newsCard.className = 'news-card';
+                newsCard.innerHTML = `
+                    <h3>${news.author}</h3>
+                    <p>${news.content}</p>
+                    <a href="${news.url}" target="_blank">Read More</a>
+                    <button onclick='likeNews(${JSON.stringify(news)})'>Like</button>
+                `;
+                newsContainer.appendChild(newsCard);
+            });
+        }
+
+        function likeNews(news) {
+            let savedNews = JSON.parse(localStorage.getItem('savedNews')) || [];
+            savedNews.push(news);
+            localStorage.setItem('savedNews', JSON.stringify(savedNews));
+            alert('News saved!');
+        }
+    </script>
+</body>
+</html>
